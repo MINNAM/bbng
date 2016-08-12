@@ -23,14 +23,14 @@ var BBNG = function( param ) {
 				}));
 
 			}
-			
+
 			var callback = function() {
 
 				Group.render();
 				self.id = window.requestAnimationFrame( callback );
 
 			}
-			
+
 			this.id =  window.requestAnimationFrame( callback );
 
 		},
@@ -51,7 +51,7 @@ var BBNG = function( param ) {
 
 	var Setting = {
 
-		size : document.getElementsByClassName( param.class ).length,
+		size : document.getElementsByClassName( param.className ).length,
 		offset: param.offset
 
 	}
@@ -96,7 +96,7 @@ var BBNG = function( param ) {
 
 	/**
 	 * Individual node to have parallax effect.
-	 * 
+	 *
 	 * @param {HTMLElement} param.node A DOM element to have parallax
 	 * @param {int} param.parent Nth parent of node that can be a reference to the offset.
 	 * @param {callback} param.callback A callback function that needs to be executed.
@@ -120,7 +120,7 @@ var BBNG = function( param ) {
 
 			if( a === undefined ) {
 
-				return _node;			
+				return _node;
 
 			}
 
@@ -133,7 +133,7 @@ var BBNG = function( param ) {
 
 			if( a === undefined ) {
 
-				return _parent;			
+				return _parent;
 
 			}
 
@@ -176,7 +176,7 @@ var BBNG = function( param ) {
 			if( b === undefined ) {
 
 				_nodes.push( a );
-				return;				
+				return;
 
 			}
 
@@ -213,7 +213,7 @@ var BBNG = function( param ) {
 			for( var i = 0, max = _nodes.length; i < max; i++ ) {
 
 				_nodes[ i ].render();
-				
+
 			}
 
 		}
@@ -264,7 +264,7 @@ var BBNG = function( param ) {
 				Util.css( images[ i ], {
 
 					backgroundImage: "",
-					display:    'block', 
+					display:    'block',
 					overflow:   'hidden'
 
 				});
@@ -287,13 +287,13 @@ var BBNG = function( param ) {
 					marginTop :  '-10%'
 
 				});
-	
+
 
 				this.queueImage({
 
 					img : img,
 					src : src,
-					parent : images[ i ], 
+					parent : images[ i ],
 					callback : function( a, b ) {
 
 						if( a.childNodes.length === 0 ) {
@@ -305,7 +305,7 @@ var BBNG = function( param ) {
 
 							console.log( a.childNodes );
 							a.insertBefore( b, a.childNodes[ 0 ] );
-							
+
 						}
 
 					}
@@ -318,18 +318,10 @@ var BBNG = function( param ) {
 
 		}
 
-		return ImageLoader.populate( param.class );
+		return ImageLoader.populate( param.className );
 
 	}();
 
-	
+
 	return BBNG;
-}
-
-var bbng = new BBNG({ class : 'test', offset: 0.6 });
-
-window.onload = function() {
-
-	bbng.render();
-
 }
