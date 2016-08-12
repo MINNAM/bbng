@@ -5,9 +5,9 @@ A minimal javascript library for a parallax effect
 
 ```HTML
 
-<div class = 'foo' style = 'background-image: url("./img/bg1.jpg");'></div>
-<div class = 'foo' style = 'background-image: url("./img/bg2.jpg");'></div>
-<div class = 'foo' style = 'background-image: url("./img/bg3.jpg");'></div>
+<div class='foo' style='background-image: url("./path/to/image1.jpg");'></div>
+<div class='foo' style='background-image: url("./path/to/image2.jpg");'></div>
+<div class='foo' style='background-image: url("./path/to/image3.jpg");'></div>
 
 ```
 ##### JS
