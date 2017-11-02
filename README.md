@@ -1,5 +1,5 @@
 # bbng
-A minimal javascript library for a parallax effect
+A javascript library for a parallax effect
 
 ##### HTML
 
